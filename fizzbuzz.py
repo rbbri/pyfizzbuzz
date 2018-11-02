@@ -1,8 +1,12 @@
 
 class Fizzbuzz():
 
-    def play(self, n):
-        if (n % 15 == 0): return 'FizzBuzz'
-        if (n % 3 == 0): return "Fizz"
-        if (n % 5 == 0): return "Buzz"
-        return n
+    def play(self, number):
+        if self.isDivisibleBy(number, 15): return 'FizzBuzz'
+        if self.isDivisibleBy(number, 3): return "Fizz"
+        if self.isDivisibleBy(number, 5): return "Buzz"
+        return number
+
+
+    def isDivisibleBy(self, number, divisor):
+        return number % divisor == 0
